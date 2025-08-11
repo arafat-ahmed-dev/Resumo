@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7e00749-34b3-40f2-abe7-6ec745d5d03d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/lib/puter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/auth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/puter.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/FileUploader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/upload.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +120,7 @@
       <workItem from="1754799520102" duration="2924000" />
       <workItem from="1754802481609" duration="2969000" />
       <workItem from="1754822902879" duration="2792000" />
-      <workItem from="1754902135397" duration="2281000" />
+      <workItem from="1754902135397" duration="6687000" />
     </task>
     <task id="LOCAL-00001" summary=" Homepage, Navbar &amp; Resume Card setup">
       <option name="closed" value="true" />

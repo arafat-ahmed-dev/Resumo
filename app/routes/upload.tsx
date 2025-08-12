@@ -35,6 +35,7 @@ const Upload = () => {
 
         setStatusText("Uploading the image...");
         console.log(imageFile)
+        // @ts-ignore
         const uploadedImage = await fs.upload([imageFile.file]);
 
         if (!uploadedImage) return setStatusText("Failed to upload image.");
@@ -66,6 +67,7 @@ const Upload = () => {
         await kv.set(`resume:${uuid}`, JSON.stringify(data));
         setStatusText("Analysis completed , redirecting...");
         console.log(data);
+        navigate(`/resume/${uuid}`);
     }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

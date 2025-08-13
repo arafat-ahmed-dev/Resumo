@@ -58,6 +58,7 @@ const Upload = () => {
             uploadedFile.path,
             prepareInstructions({jobTitle, jobDescription})
         )
+        console.log(feedback)
         if (!feedback) return setStatusText("Failed to get feedback.");
         const feedbackText = typeof feedback.message.content === "string"
             ? feedback.message.content

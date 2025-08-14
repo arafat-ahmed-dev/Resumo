@@ -11,6 +11,12 @@ interface FSItem {
     accessed: number;
     size: number | null;
     writable: boolean;
+    // Extended properties for UI
+    type?: "file" | "directory"
+    fileType?: string
+    shared?: boolean
+    version?: number
+    permissions?: string[]
 }
 
 interface PuterUser {

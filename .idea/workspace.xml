@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7e00749-34b3-40f2-abe7-6ec745d5d03d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/ATS.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/Summary.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/details.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/resume.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/wiper/Danger-zone.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/wiper/File-Manager.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/wiper/File-stats-header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/wiper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/upload.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/puter.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/puter.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +92,8 @@
       <recent name="C:\Users\arafa\Documents\Arafat\resumo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\arafa\Documents\Arafat\resumo\app\routes" />
+      <recent name="C:\Users\arafa\Documents\Arafat\resumo\app\components" />
       <recent name="C:\Users\arafa\Documents\Arafat\resumo" />
     </key>
   </component>
@@ -122,7 +128,10 @@
       <workItem from="1754802481609" duration="2969000" />
       <workItem from="1754822902879" duration="2792000" />
       <workItem from="1754902135397" duration="6777000" />
-      <workItem from="1754972072327" duration="9561000" />
+      <workItem from="1754972072327" duration="12942000" />
+      <workItem from="1755060250761" duration="7626000" />
+      <workItem from="1755084845290" duration="1454000" />
+      <workItem from="1755144315682" duration="5569000" />
     </task>
     <task id="LOCAL-00001" summary=" Homepage, Navbar &amp; Resume Card setup">
       <option name="closed" value="true" />
@@ -132,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754805452995</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement the Resume page and also add the fetching in the home to get the all current resume from the server">
+      <option name="closed" value="true" />
+      <created>1755066210963</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755066210963</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +157,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" Homepage, Navbar &amp; Resume Card setup" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Homepage, Navbar &amp; Resume Card setup" />
+    <MESSAGE value="Implement the Resume page and also add the fetching in the home to get the all current resume from the server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement the Resume page and also add the fetching in the home to get the all current resume from the server" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/components/wiper/File-Manager.tsx</url>
+          <line>231</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

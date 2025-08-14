@@ -241,3 +241,13 @@ export const prepareInstructions = ({jobTitle, jobDescription,}: {
   Provide the feedback using the following format: ${AIResponseFormat}
   Return the analysis as a JSON object, without any other text and without the backticks.
   Do not include any other text or comments.`;
+
+const FILE_TYPE_CATEGORIES = {
+    images: ["image", "jpg", "jpeg", "png", "gif", "svg", "webp"],
+    documents: ["pdf", "text", "doc", "docx", "txt", "md"],
+    media: ["audio", "video", "mp3", "mp4", "avi", "mov"],
+    code: ["javascript", "js", "ts", "tsx", "jsx", "html", "css", "json", "xml"],
+    archives: ["archive", "zip", "rar", "tar", "gz"],
+    data: ["database", "db", "sql", "csv", "xlsx"],
+    other: [],
+}

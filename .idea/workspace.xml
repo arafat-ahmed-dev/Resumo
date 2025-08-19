@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7e00749-34b3-40f2-abe7-6ec745d5d03d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/wiper/Danger-zone.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/wiper/File-Manager.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/wiper/File-stats-header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/wiper.tsx" afterDir="false" />
+    <list default="true" id="f7e00749-34b3-40f2-abe7-6ec745d5d03d" name="Changes" comment="Wiper routes ui implementation and routes protected done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/puter.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/puter.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/wiper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/wiper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +122,9 @@
       <workItem from="1754972072327" duration="12942000" />
       <workItem from="1755060250761" duration="7626000" />
       <workItem from="1755084845290" duration="1454000" />
-      <workItem from="1755144315682" duration="5569000" />
+      <workItem from="1755144315682" duration="5749000" />
+      <workItem from="1755359586498" duration="2258000" />
+      <workItem from="1755574288664" duration="691000" />
     </task>
     <task id="LOCAL-00001" summary=" Homepage, Navbar &amp; Resume Card setup">
       <option name="closed" value="true" />
@@ -149,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755066210963</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Wiper routes ui implementation and routes protected done">
+      <option name="closed" value="true" />
+      <created>1755150426949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1755150426949</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Wiper routes ui implementation and routes protected done">
+      <option name="closed" value="true" />
+      <created>1755150441891</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1755150441891</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +167,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" Homepage, Navbar &amp; Resume Card setup" />
     <MESSAGE value="Implement the Resume page and also add the fetching in the home to get the all current resume from the server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement the Resume page and also add the fetching in the home to get the all current resume from the server" />
+    <MESSAGE value="Wiper routes ui implementation and routes protected done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wiper routes ui implementation and routes protected done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -166,7 +176,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/components/wiper/File-Manager.tsx</url>
           <line>231</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -35,115 +35,43 @@ const WipeApp = () => {
         }
     }, [isLoading]);
 
+    function getFileType(fileName: string): string {
+        // Get the last part after the dot
+        const parts = fileName.split(".");
+        if (parts.length < 2) return "unknown"; // No extension
+        return parts.pop()!.toLowerCase(); // Return extension in lowercase
+    }
+
+    const loadFiles = async () => {
+        const files = (await fs.readDir("./")) as FSItem[];
+        console.log(files);
+        const allFiles: FSItem[] = [];
+        allFiles.push(
+            ...files.map((file, index) => ({
+                id: String(index + 1),
+                uid: file.id || `file_${index + 1}`,
+                name: file.name,
+                path: file.path,
+                is_dir: file.is_dir,
+                parent_id: file.parent_id,
+                parent_uid: file.parent_uid,
+                created: file.created || Date.now(),
+                modified: file.modified || Date.now(),
+                accessed: file.accessed || Date.now(),
+                size: file.size || 0,
+                writable: file.writable ?? true,
+                fileType: getFileType(file.name) || "unknown",
+                shared: file.shared ?? false,
+                version: file.version || 1,
+                permissions: file.permissions || ["read", "write"],
+            }))
+        );
+        console.log(allFiles);
+        setFiles(allFiles);
+    };
     useEffect(() => {
-        const demoFiles: FSItem[] = [
-            {
-                id: "1",
-                uid: "file_001",
-                name: "project-proposal.pdf",
-                path: "/documents/project-proposal.pdf",
-                is_dir: false,
-                parent_id: "root",
-                parent_uid: "root_uid",
-                created: Date.now() - 86400000 * 5,
-                modified: Date.now() - 86400000 * 2,
-                accessed: Date.now() - 86400000,
-                size: 2048576,
-                writable: true,
-                fileType: "pdf",
-                shared: true,
-                version: 2,
-                permissions: ["read", "write"],
-            },
-            {
-                id: "2",
-                uid: "file_002",
-                name: "vacation-photos",
-                path: "/photos/vacation-photos",
-                is_dir: true,
-                parent_id: "root",
-                parent_uid: "root_uid",
-                created: Date.now() - 86400000 * 10,
-                modified: Date.now() - 86400000 * 3,
-                accessed: Date.now() - 86400000,
-                size: null,
-                writable: true,
-                shared: false,
-                permissions: ["read", "write", "delete"],
-            },
-            {
-                id: "3",
-                uid: "file_003",
-                name: "app.js",
-                path: "/projects/my-app/app.js",
-                is_dir: false,
-                parent_id: "proj_001",
-                parent_uid: "proj_001_uid",
-                created: Date.now() - 86400000 * 7,
-                modified: Date.now() - 86400000,
-                accessed: Date.now() - 3600000,
-                size: 15420,
-                writable: true,
-                fileType: "javascript",
-                shared: false,
-                version: 5,
-                permissions: ["read", "write"],
-            },
-            {
-                id: "4",
-                uid: "file_004",
-                name: "presentation.pptx",
-                path: "/work/presentation.pptx",
-                is_dir: false,
-                parent_id: "work_001",
-                parent_uid: "work_001_uid",
-                created: Date.now() - 86400000 * 3,
-                modified: Date.now() - 86400000,
-                accessed: Date.now() - 7200000,
-                size: 5242880,
-                writable: true,
-                fileType: "presentation",
-                shared: true,
-                version: 1,
-                permissions: ["read"],
-            },
-            {
-                id: "5",
-                uid: "file_005",
-                name: "music-collection",
-                path: "/media/music-collection",
-                is_dir: true,
-                parent_id: "media_001",
-                parent_uid: "media_001_uid",
-                created: Date.now() - 86400000 * 30,
-                modified: Date.now() - 86400000 * 5,
-                accessed: Date.now() - 86400000 * 2,
-                size: null,
-                writable: true,
-                shared: false,
-                permissions: ["read", "write"],
-            },
-            {
-                id: "6",
-                uid: "file_006",
-                name: "database-backup.sql",
-                path: "/backups/database-backup.sql",
-                is_dir: false,
-                parent_id: "backup_001",
-                parent_uid: "backup_001_uid",
-                created: Date.now() - 86400000,
-                modified: Date.now() - 86400000,
-                accessed: Date.now() - 43200000,
-                size: 104857600,
-                writable: false,
-                fileType: "database",
-                shared: false,
-                version: 1,
-                permissions: ["read"],
-            },
-        ]
-        setFiles(demoFiles)
-    }, [])
+        loadFiles()
+    }, []);
 
     const formatFileSize = (bytes: number): string => {
         if (bytes === 0) return "0 Bytes"
@@ -215,7 +143,10 @@ const WipeApp = () => {
         try {
             // Mock wipe functionality
             console.log("Wiping all data...")
-            await new Promise((resolve) => setTimeout(resolve, 2000))
+            for (const file of files) {
+                await fs.delete(file.path);
+            }
+            await kv.flush();
             setFiles([])
             setSelectedFiles(new Set())
         } catch (error) {

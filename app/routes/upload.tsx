@@ -4,8 +4,8 @@ import FileUploader from "~/components/FileUploader";
 import {usePuterStore} from "~/lib/puter";
 import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdfToImage";
-import {generateUUID} from "~/lib/utils";
 import {prepareInstructions} from "../../constants";
+import {generateUUID} from "~/lib/utils";
 
 interface HandleAnalyzeProps {
     companyName: string,
@@ -21,6 +21,10 @@ const Upload = () => {
     const [isProccessing, setIsProccessing] = useState(false);
     const [statusText, setStatusText] = useState("");
     const [file, setFile] = useState<File | null>(null);
+
+    // useEffect(() => {
+    //     if (!auth.isAuthenticated) navigate('/auth?next=/');
+    // }, [auth.isAuthenticated])
 
     const handleFileSelect = (file: File | null) => setFile(file);
     const handleAnalyze = async ({companyName, jobTitle, jobDescription, file}: HandleAnalyzeProps) => {

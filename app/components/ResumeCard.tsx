@@ -15,7 +15,7 @@ const ResumeCard = ({resume}: { resume: Resume }) => {
             let url = URL.createObjectURL(blob);
             setResumeUrl(url);
         }
-        loadResume();
+        loadResume().then(loadResume);
     }, [resume.imagePath])
     return (
 
@@ -44,22 +44,19 @@ const ResumeCard = ({resume}: { resume: Resume }) => {
             </div>
 
             <div className="gradient-border fade-in duration-1000 animate-in">
-                <div className="size-full relative">
-                    {/* Skeleton */}
+                <div className="relative w-full h-[350px] max-sm:h-[200px]">
                     {!resumeUrl && (
-                        <div className="w-full h-[350px] max-sm:h-[200px] bg-gray-200 animate-pulse rounded-md"/>
+                        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-md"/>
                     )}
-
-                    {/* Image */}
                     <img
                         src={resumeUrl}
                         alt="resumeUrl"
-                        className={`w-full h-[350px] max-sm:h-[200px] object-cover object-top rounded-md transition-opacity duration-500 ${
+                        className={`w-full h-full object-cover object-top rounded-md transition-opacity duration-500 ${
                             !resumeUrl ? "opacity-0" : "opacity-100"
                         }`}
-                        onLoad={(e) => e.currentTarget.classList.remove("opacity-0")}
                     />
                 </div>
+
             </div>
         </Link>
 

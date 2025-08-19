@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f7e00749-34b3-40f2-abe7-6ec745d5d03d" name="Changes" comment="Vercel will build a static SPA">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +126,8 @@
       <workItem from="1755084845290" duration="1454000" />
       <workItem from="1755144315682" duration="5749000" />
       <workItem from="1755359586498" duration="2258000" />
-      <workItem from="1755574288664" duration="9533000" />
+      <workItem from="1755574288664" duration="9909000" />
+      <workItem from="1755586426221" duration="668000" />
     </task>
     <task id="LOCAL-00001" summary=" Homepage, Navbar &amp; Resume Card setup">
       <option name="closed" value="true" />

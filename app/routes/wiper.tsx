@@ -24,12 +24,12 @@ const WipeApp = () => {
     const [isWiping, setIsWiping] = useState(false)
 
 
-    // Protected this Page/......./
+    // Protected this Page.......//
     useEffect(() => {
         if (!isLoading) {
             if (!auth.isAuthenticated) {
                 navigate("/auth?next=/wipe");
-            } else if (auth.user?.username !== "arafat457") {
+            } else if (auth.user?.username !== import.meta.env.VITE_AUTHER) {
                 setErrors("Unauthorized User Detect.");
             }
         }
@@ -70,7 +70,7 @@ const WipeApp = () => {
         setFiles(allFiles);
     };
     useEffect(() => {
-        loadFiles()
+        loadFiles().then(loadFiles);
     }, []);
 
     const formatFileSize = (bytes: number): string => {

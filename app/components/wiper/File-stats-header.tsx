@@ -1,3 +1,6 @@
+import {Link} from "react-router";
+import React from "react";
+
 interface FileStatsHeaderProps {
     user: PuterUser | null
     files: FSItem[]
@@ -47,19 +50,26 @@ const FileStatsHeader = ({user, files, formatFileSize}: FileStatsHeaderProps) =>
             {/* Header */}
             <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-4 sm:p-6 mb-6 sm:mb-8">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-                    <div className="flex items-center gap-3 sm:gap-4">
-                        <div
-                            className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
-                            <img src="/images/server.png" alt="server"
-                                 className="object-cover"/>
+                    <div className="flex items-center justify-between w-full gap-3 sm:gap-4">
+                        <div className="flex items-center gap-2">
+                            <div
+                                className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
+                                <img src="/images/server.png" alt="server"
+                                     className="object-cover"/>
+                            </div>
+                            <div>
+                                <p className="sm:text-xl font-bold text-slate-100">Puter Cloud Storage
+                                    Manager</p>
+                                <p className="text-sm sm:text-base text-slate-400">
+                                    Manage your cloud files with version control and sharing
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <h1 className="text-xl font-bold text-slate-100 ">Puter Cloud Storage
-                                Manager</h1>
-                            <p className="text-sm sm:text-base text-slate-400">
-                                Manage your cloud files with version control and sharing
-                            </p>
-                        </div>
+                        <Link
+                            className="text-white text-sm font-semibold md:text-left text-right border-1 p-2 rounded-xl overflow-hidden"
+                            to="/">
+                            Back To Homepage
+                        </Link>
                     </div>
                 </div>
 

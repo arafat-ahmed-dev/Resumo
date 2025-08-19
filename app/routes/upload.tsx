@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Navbar from "~/components/Navbar";
 import FileUploader from "~/components/FileUploader";
 import {usePuterStore} from "~/lib/puter";
@@ -16,15 +16,15 @@ interface HandleAnalyzeProps {
 }
 
 const Upload = () => {
-    const {auth, isLoading, fs, ai, kv} = usePuterStore();
+    const {auth, fs, ai, kv} = usePuterStore();
     const navigate = useNavigate();
     const [isProccessing, setIsProccessing] = useState(false);
     const [statusText, setStatusText] = useState("");
     const [file, setFile] = useState<File | null>(null);
 
-    // useEffect(() => {
-    //     if (!auth.isAuthenticated) navigate('/auth?next=/');
-    // }, [auth.isAuthenticated])
+    useEffect(() => {
+        if (!auth.isAuthenticated) navigate('/auth?next=/');
+    }, [auth.isAuthenticated])
 
     const handleFileSelect = (file: File | null) => setFile(file);
     const handleAnalyze = async ({companyName, jobTitle, jobDescription, file}: HandleAnalyzeProps) => {
@@ -72,7 +72,7 @@ const Upload = () => {
         await kv.set(`resume:${uuid}`, JSON.stringify(data));
         setStatusText("Analysis completed , redirecting...");
         console.log(data);
-        navigate(`/resume/${uuid}`);
+        navigate(`/resume/${uuid}`, {state: {secret: jobTitle}});
     }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -86,6 +86,7 @@ const Upload = () => {
         if (!file) return;
         handleAnalyze({companyName, jobTitle, jobDescription, file})
     }
+
     return (
         <main className={"bg-[url('/images/bg-main.svg')] bg-cover"}>
             <Navbar/>

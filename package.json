@@ -3,10 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "copy-worker": "cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/"
   },
   "dependencies": {
@@ -32,10 +31,14 @@
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^5.0.1",
     "tailwindcss": "^4.1.4",
     "tw-animate-css": "^1.3.6",
     "typescript": "^5.8.3",
-    "vite": "^6.3.3",
+    "vite": "^6.3.5",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }

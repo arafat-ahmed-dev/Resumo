@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useNavigate, useParams} from "react-router";
+import {Link, useLocation, useNavigate, useParams} from "react-router";
 import {usePuterStore} from "~/lib/puter";
 import Summary from "~/components/Summary";
 import ATS from "~/components/ATS";
@@ -22,6 +22,7 @@ const Resume = () => {
     const [feedBack, setFeedBack] = useState<Feedback | null>(null)
     const navigate = useNavigate();
     const {id} = useParams();
+    const {state} = useLocation();
 
     useEffect(() => {
         if (!isLoading && !auth.isAuthenticated) navigate(`/auth?next=/resume/${id}`);
@@ -47,7 +48,6 @@ const Resume = () => {
             const imageUrl = URL.createObjectURL(imageBlob);
             setImageUrl(imageUrl);
 
-            // 1️⃣ Utility function for safe parsing
             function safeJSONParse<T>(value: string, fallback: T): T {
                 try {
                     return JSON.parse(value) as T;
@@ -58,10 +58,8 @@ const Resume = () => {
             }
 
             try {
-                // Step 1: Parse the first JSON safely
                 const outerFeedback: any = safeJSONParse<Feedback>(data.feedback, {} as Feedback);
 
-                // Step 2: If `outerFeedback.text` is a string, parse it; if it's already an object, use it directly
                 const parsedFeedback =
                     typeof outerFeedback.text === "string"
                         ? safeJSONParse(outerFeedback.text, {})
@@ -77,15 +75,24 @@ const Resume = () => {
 
         }
 
-        loadResume();
+        loadResume().then(loadResume);
     }, [id]);
+
     return (
         <main className="!pt-0">
             <nav className="resume-nav">
-                <Link className="back-button" to="/">
-                    <img src="/icons/back.svg" alt="back-button" className="size-2.5"/>
-                    <span className="text-gray-800 text-sm font-semibold">Back To Homepage</span>
-                </Link>
+                <div className="flex items-center justify-center gap-3">
+                    <Link className="back-button" to="/">
+                        <img src="/icons/back.svg" alt="back-button" className="size-2.5"/>
+                        <span
+                            className="text-gray-800 text-sm font-semibold md:text-left text-right">Back To Homepage</span>
+                    </Link>
+                    <div className="flex items-center justify-center">
+                        <p className="text-[#475467] md:text-[16px] text-sm">{state?.secret}</p>
+                        <img src="/icons/chevron-right.svg" alt="chevron-right" className="size-[20px]"/>
+                        <p className="font-[500]">Resume Review</p>
+                    </div>
+                </div>
             </nav>
             <div className="flex flex-row w-full max-lg:flex-col-reverse">
                 <section

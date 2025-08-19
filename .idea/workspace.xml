@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7e00749-34b3-40f2-abe7-6ec745d5d03d" name="Changes" comment="Wiper routes ui implementation and routes protected done">
+    <list default="true" id="f7e00749-34b3-40f2-abe7-6ec745d5d03d" name="Changes" comment="Vercel will build a static SPA">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ResumeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ResumeCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/upload.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +123,7 @@
       <workItem from="1755084845290" duration="1454000" />
       <workItem from="1755144315682" duration="5749000" />
       <workItem from="1755359586498" duration="2258000" />
-      <workItem from="1755574288664" duration="2081000" />
+      <workItem from="1755574288664" duration="7721000" />
     </task>
     <task id="LOCAL-00001" summary=" Homepage, Navbar &amp; Resume Card setup">
       <option name="closed" value="true" />
@@ -161,7 +157,31 @@
       <option name="project" value="LOCAL" />
       <updated>1755150441891</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Vercel configuration Done">
+      <option name="closed" value="true" />
+      <created>1755581720152</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755581720152</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Vercel will build a static SPA">
+      <option name="closed" value="true" />
+      <created>1755581955964</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1755581955964</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Vercel will build a static SPA">
+      <option name="closed" value="true" />
+      <created>1755582356329</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1755582356329</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +191,9 @@
     <MESSAGE value=" Homepage, Navbar &amp; Resume Card setup" />
     <MESSAGE value="Implement the Resume page and also add the fetching in the home to get the all current resume from the server" />
     <MESSAGE value="Wiper routes ui implementation and routes protected done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wiper routes ui implementation and routes protected done" />
+    <MESSAGE value="Vercel configuration Done" />
+    <MESSAGE value="Vercel will build a static SPA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vercel will build a static SPA" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

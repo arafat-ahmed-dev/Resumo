@@ -6,7 +6,6 @@ import {usePuterStore} from "~/lib/puter";
 const ResumeCard = ({resume}: { resume: Resume }) => {
     const [resumeUrl, setResumeUrl] = useState("")
     const {fs} = usePuterStore();
-
     useEffect(() => {
         const loadResume = async () => {
             setResumeUrl("")
@@ -22,6 +21,7 @@ const ResumeCard = ({resume}: { resume: Resume }) => {
         <Link
             className="resume-card animate-in fade-in duration-1000 "
             to={`/resume/${resume.id}`}
+            state={{secret: resume.jobTitle}}
         >
             <div className="resume-card-header px-2">
                 <div className="flex flex-col gap-2 max-w-[80%]">
